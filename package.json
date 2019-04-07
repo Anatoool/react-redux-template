@@ -1,0 +1,24 @@
+{
+  "name": "react-redux-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anatoool/react-redux-template.git"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "webpack"
+  ],
+  "author": "Anatoliy Zaporozhets",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Anatoool/react-redux-template/issues"
+  },
+  "homepage": "https://github.com/Anatoool/react-redux-template#readme"
+}
