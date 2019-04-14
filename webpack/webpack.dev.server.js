@@ -17,7 +17,7 @@ const options = {
   },
   quiet: false,
   noInfo: false,
-  // contentBase: paths.appSrc,
+  contentBase: paths.appSrc,
   // watchContentBase: true,
   historyApiFallback: true,
   proxy: {
