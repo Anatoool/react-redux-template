@@ -11,6 +11,7 @@ export const API_CONTROLLERS = {
 export const CLIENT_PAGES = {
   HOME: '/',
   ABOUT: '/about',
+  IDEAS: '/ideas',
   LICENSE: '/license',
   PRIVACY: '/privacy',
   TERMS: '/terms',

@@ -25,11 +25,10 @@ export function changeIdeaOperationId(operationId, type) {
 
 export function getIdeas({
   page = 1,
-  perPage = 25,
-  search,
+  pageSize = 25,
   operationId,
 } = {}) {
-  const queries = { page: page - 1, perPage, search };
+  const queries = { page: page, pageSize };
   const queriesString = stringify(queries, { addQueryPrefix: true });
   const url = `${API_CONTROLLERS.IDEAS}${queriesString}`;
   lastGetListOperationId = operationId;

@@ -67,6 +67,16 @@ export class HeaderMenu extends React.Component {
           </li>
           <li className="header-menu__list-item">
             <NavLink
+              to={CLIENT_PAGES.IDEAS}
+              className="header-menu__list-link"
+              activeClassName="_active"
+              onClick={this.toggleMenu}
+            >
+              Ideas
+            </NavLink>
+          </li>
+          <li className="header-menu__list-item">
+            <NavLink
               to={CLIENT_PAGES.ABOUT}
               className="header-menu__list-link"
               activeClassName="_active"
