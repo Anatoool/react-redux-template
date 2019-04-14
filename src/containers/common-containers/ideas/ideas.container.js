@@ -27,7 +27,7 @@ export class IdeasContainer extends React.Component {
 
   static defaultProps = {
     ideasState: {},
-    getArtworks: () => {},
+    getIdeas: () => {},
     clearIdeasList: () => {},
   };
 
@@ -98,8 +98,8 @@ export class IdeasContainer extends React.Component {
         <div className="ideas-container__list">
           {ideas.map((item, index) => {
             return (
-              <div className="ideas-container__tile">
-                <IdeaTile key={index} idea={item}/>
+              <div key={index} className="ideas-container__tile">
+                <IdeaTile idea={item}/>
               </div>
             );
           })}
