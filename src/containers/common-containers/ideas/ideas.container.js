@@ -2,9 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { Loader } from 'components';
+import { Loader, IdeaTile } from 'components';
 import uuid from 'uuid/v1';
 import { getIdeas, clearIdeasList, changeIdeaOperationId } from 'store/actions/ideas.actions';
+
+import './ideas-container.sass';
 
 const mapStateToProps = ({ ideasState }) => ({
   ideasState,
@@ -93,6 +95,15 @@ export class IdeasContainer extends React.Component {
 
     return (
       <div className="ideas-container container-full-width">
+        <div className="ideas-container__list">
+          {ideas.map((item, index) => {
+            return (
+              <div className="ideas-container__tile">
+                <IdeaTile key={index} idea={item}/>
+              </div>
+            );
+          })}
+        </div>
         <Loader isShow={isLoading}>
           <div style={{ marginTop: '15px' }} />
         </Loader>
