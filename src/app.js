@@ -17,7 +17,7 @@ class App extends React.Component {
   }
 
   render() {
-    const { store, hey, lalaley } = this;
+    const { store } = this;
     return (
       <Provider store={store}>
         <BrowserRouter>
