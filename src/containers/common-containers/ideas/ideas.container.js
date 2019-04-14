@@ -89,13 +89,13 @@ export class IdeasContainer extends React.Component {
     const { isLoading, allImagesLoaded } = this.state;
     const { ideasState } = this.props;
     const { list = {} } = ideasState;
-    const { artworks = [] } = list;
-
-    console.log(ideasState);
+    const { ideas = [] } = list;
 
     return (
       <div className="ideas-container container-full-width">
-        Ideas container
+        <Loader isShow={isLoading}>
+          <div style={{ marginTop: '15px' }} />
+        </Loader>
       </div>
     );
   }

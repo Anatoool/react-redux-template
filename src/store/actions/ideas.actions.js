@@ -34,13 +34,13 @@ export function getIdeas({
   lastGetListOperationId = operationId;
 
   return (dispatch, getState, apiRequest) => {
-    const success = ({ data, pagination }) => {
+    const success = ({ items, pagination }) => {
       const { ideasState = {} } = getState();
       const { list = {} } = ideasState;
       const { ideas: currentIdeas = [] } = list;
 
       const newList = lastGetListOperationId === operationId ? {
-        ideas: page === 1 ? [...data] : [...currentIdeas, ...data],
+        ideas: page === 1 ? [...items] : [...currentIdeas, ...items],
         pagination,
       } : { ...list };
 

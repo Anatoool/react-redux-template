@@ -3,7 +3,7 @@ const webpack = require('webpack');
 const paths = require('./_paths');
 const config = require('./dev.config');
 
-const { API_URL = 'https://localhost:4000' } = process.env;
+const { API_URL = 'http://localhost:4000' } = process.env;
 
 const Port = 5000;
 const Host = '0.0.0.0';
