@@ -1,6 +1,7 @@
 .header-menu
   position: relative
   height: 52px
+  padding-top: 3px
   &__list
     list-style: none
     position: absolute
@@ -31,13 +32,13 @@
       display: block
       line-height: 40px
       padding-left: 16px
-      color: $light-grey
+      color: $light-grey !important
       font-size: 0.8125rem
       &:hover
-        color: $sky-blue
+        color: $sky-blue !important
         background: rgba($sky-blue, 0.08)
       &._active
-        color: $sky-blue
+        color: $sky-blue !important
   &__list._opened
     .header-menu__list-item
       height: 40px

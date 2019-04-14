@@ -9,6 +9,7 @@
   color: $navy
   overflow: hidden
   user-select: none
+  font-size: 1rem
   &:disabled
     cursor: default
     .btn__click-area
@@ -16,6 +17,10 @@
   &:focus
     outline: none
     background: $light-grey
+  &.BUTTON
+    font-size: 0.8125rem
+    font-weight: 800
+    text-transform: uppercase
 
   .material-icons
     color: inherit
@@ -31,10 +36,13 @@
     align-items: center
     justify-content: center
     color: inherit
+    background: transparent
 
   &._pressed
     .btn__click-area
       opacity: 1
+    .btn__children
+      background: transparent !important
 
   &__click-area
     position: absolute
@@ -47,15 +55,17 @@
     color: $white
     box-shadow: 0 3px 6px rgba(0,0,0,0.16)
     &:hover
-      background: $sky-blue-dark
+      .btn__children
+        background: rgba($navy, .16)
     &:focus
-      background: $sky-blue-light
+      .btn__children
+        background: rgba($white, .16)
     &:disabled
       background: rgba($light-grey, 0.24) !important
       color: rgba($light-grey, 0.48) !important
       box-shadow: none
     .btn__click-area
-      background: $sky-blue-light
+      background: rgba($white, 0.16)
   &._primary._pressed
     background: $sky-blue
 
@@ -80,17 +90,20 @@
     width: auto
     height: 36px
     font-size: 0.8125rem
-    padding: 0 18px
     background: $sky-blue
     color: $white
+    .btn__children
+      padding: 0 18px
     span
       padding-left: 10px
     &:hover
-      background: $sky-blue-dark
+      .btn__children
+        background: rgba($navy, .16)
     &:focus
-      background: $sky-blue-light
+      .btn__children
+        background: rgba($white, 0.16)
     .btn__click-area
-      background: $sky-blue-light
+      background: rgba($white, 0.16)
   &._search._pressed
     background: $sky-blue
 

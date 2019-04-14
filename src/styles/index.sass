@@ -1,5 +1,6 @@
 @import "fonts"
-@import "typography"
+@import "typography-html"
+@import "typography-css"
 @import "display"
 
 *
@@ -19,6 +20,19 @@ html
 .d-block
   display: block
 
+.container
+  width: 100%
+  max-width: 1280px
+  padding: 1rem
+  margin: auto
+
+.container-full-width
+  width: 100%
+  padding: 1rem
+
+.row-container
+  padding: 1.1875rem 1rem 0
+
 input,
 textarea,
 button,
@@ -26,7 +40,8 @@ select,
 a
   -webkit-tap-highlight-color: rgba(0,0,0,0)
 
-a
-  color: $sky-blue
-
+.control
+  font-size: 0.8125rem
+  color: $light-grey
+  font-weight: bold
 
