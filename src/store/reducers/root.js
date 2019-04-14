@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
 
-import testReducer from './test';
+import ideasReducer from './ideas';
 
 const reducers = {
-  testState: testReducer,
+  ideasState: ideasReducer,
 };
 
 export default combineReducers(reducers);

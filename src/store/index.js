@@ -1,10 +1,11 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
+import { apiRequest } from 'helpers/api/apiRequest';
 import rootReducer from './reducers/root';
 
 export function configureStore(initialState = {}) {
   const middlewares = [
-    thunk,
+    thunk.withExtraArgument(apiRequest),
   ];
 
   let composeEnhancers = compose;
